@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Issues Tracker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f3f4f6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 340px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+      padding: 22px;
+    }
+
+    .logo-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 6px;
+    }
+
+    .input {
+      width: 100%;
+      height: 32px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      padding: 0 10px;
+      font-size: 12px;
+      color: #111827;
+      outline: none;
+    }
+
+    .input::placeholder {
+      color: #9ca3af;
+    }
+
+    .input:focus {
+      border-color: #5b21b6;
+      box-shadow: 0 0 0 2px rgba(91, 33, 182, 0.08);
+    }
+
+    .default-text {
+      font-size: 11px;
+      color: #2563eb;
+      margin-top: 5px;
+    }
+
+    .signin-btn {
+      width: 100%;
+      height: 34px;
+      margin-top: 8px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(90deg, #4f00ff, #6d28d9);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .signin-btn:hover {
+      opacity: 0.96;
+    }
+
+    .error {
+      display: none;
+      margin-top: 8px;
+      color: #dc2626;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 16px 0 14px;
+      color: #6b7280;
+      font-size: 12px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e5e7eb;
+    }
+
+    .divider span {
+      margin: 0 10px;
+    }
+
+    .demo-title {
+      text-align: center;
+      font-size: 11px;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .demo-box {
+      background: #f3f4f6;
+      border-radius: 6px;
+      padding: 16px 12px;
+      text-align: center;
+      font-size: 13px;
+      color: #111827;
+      line-height: 1.5;
+    }
+
+    .demo-box b {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo-wrap">
+      <img
+        class="logo"
+        src="/assets/github-logo.png"
+        alt="GitHub Logo"
+      />
+    </div>
+
+    <h2 class="title">GitHub Issues Tracker</h2>
+    <p class="subtitle">Sign in to manage your issues</p>
+
+    <div class="form-group">
+      <label class="label" for="username">Username</label>
+      <input
+        class="input"
+        type="text"
+        id="username"
+        placeholder="Enter Username"
+      />
+      <div class="default-text">Default: admin</div>
+    </div>
+
+    <div class="form-group">
+      <label class="label" for="password">Password</label>
+      <input
+        class="input"
+        type="password"
+        id="password"
+        placeholder="Enter Password"
+      />
+      <div class="default-text">Default: admin123</div>
+    </div>
+
+    <button class="signin-btn" onclick="login()">Sign In</button>
+
+    <p id="error" class="error">Wrong username or password</p>
+
+    <div class="divider">
+      <span>OR</span>
+    </div>
+
+    <div class="demo-title">Demo Credentials:</div>
+
+    <div class="demo-box">
+      <div><b>Username:</b> admin</div>
+      <div><b>Password:</b> admin123</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
