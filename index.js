@@ -1,4 +1,4 @@
-const ALL_ISSUES_API = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
+ const ALL_ISSUES_API = "https://phi-lab-server.vercel.app/api/v1/lab/issues";
 const SINGLE_ISSUE_API = "https://phi-lab-server.vercel.app/api/v1/lab/issue/";
 const SEARCH_ISSUE_API = "https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=";
 
