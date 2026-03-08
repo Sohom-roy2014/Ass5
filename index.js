@@ -295,19 +295,62 @@ function createLabel(label) {
 
   const name = label.toLowerCase();
 
-  if (name === "bug") return `<span class="label-badge label-bug">BUG</span>`;
+  if (name === "bug")
+    return `
+    <span class="label-badge label-bug">
+      <svg class="label-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M9 7V6a3 3 0 1 1 6 0v1M8 10h8M9 7h6a3 3 0 0 1 3 3v3a6 6 0 1 1-12 0v-3a3 3 0 0 1 3-3Z"
+        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      BUG
+    </span>
+    `;
 
   if (name === "help wanted")
-    return `<span class="label-badge label-help-wanted">HELP WANTED</span>`;
+    return `
+    <span class="label-badge label-help-wanted">
+      <svg class="label-icon" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="12" r="3" fill="currentColor"/>
+      </svg>
+      HELP WANTED
+    </span>
+    `;
 
   if (name === "enhancement")
-    return `<span class="label-badge label-enhancement">ENHANCEMENT</span>`;
+    return `
+    <span class="label-badge label-enhancement">
+      <svg class="label-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M12 3L14.5 9L21 9.5L16 13.5L17.5 20L12 16.5L6.5 20L8 13.5L3 9.5L9.5 9L12 3Z"
+        stroke="currentColor" stroke-width="1.8"/>
+      </svg>
+      ENHANCEMENT
+    </span>
+    `;
 
   if (name === "good first issue")
-    return `<span class="label-badge label-good-first-issue">GOOD FIRST ISSUE</span>`;
+    return `
+    <span class="label-badge label-good-first-issue">
+      <svg class="label-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M12 4V20M4 12H20"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      GOOD FIRST ISSUE
+    </span>
+    `;
 
   if (name === "documentation")
-    return `<span class="label-badge label-documentation">DOCUMENTATION</span>`;
+    return `
+    <span class="label-badge label-documentation">
+      <svg class="label-icon" viewBox="0 0 24 24" fill="none">
+        <path d="M6 3H14L18 7V21H6V3Z"
+        stroke="currentColor" stroke-width="2"/>
+        <path d="M14 3V7H18"
+        stroke="currentColor" stroke-width="2"/>
+      </svg>
+      DOCUMENTATION
+    </span>
+    `;
 
   return `<span class="label-badge label-default">${label}</span>`;
 }
